@@ -7,10 +7,15 @@
             "email": "qferrer@outook.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/qferr/mjml-php"
+        }
+    ],
     "require": {
-        "php": ">=7.2",
-        "symfony/process": "~4.0",
-        "guzzlehttp/guzzle": "~6.0"
+        "twig/twig": "~2.0",
+        "qferr/mjml-php": "dev-master"
     },
     "autoload": {
         "psr-4": {

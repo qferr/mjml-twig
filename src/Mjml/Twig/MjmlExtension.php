@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mjml\Twig;
+namespace Qferrer\Mjml\Twig;
 
 use Qferrer\Mjml\Renderer\RendererInterface;
 use Twig\Extension\AbstractExtension;
