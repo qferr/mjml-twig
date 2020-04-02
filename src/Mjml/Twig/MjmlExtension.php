@@ -32,7 +32,7 @@ class MjmlExtension extends AbstractExtension
     public function getFilters(): array
     {
         return [
-            new TwigFilter('mjml_to_html', [$this, 'compile'], ['is_safe' => ['all']])
+            new TwigFilter('mjml_to_html', [$this, 'render'], ['is_safe' => ['all']])
         ];
     }
 
