@@ -1,5 +1,6 @@
 {
     "name": "qferr/mjml-twig",
+    "description": "Twig extension that provides a filter that processes a mjml email template",
     "type": "library",
     "authors": [
         {
@@ -16,6 +17,12 @@
     "require": {
         "twig/twig": "~2.0",
         "qferr/mjml-php": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests/"
     },
     "autoload": {
         "psr-4": {
