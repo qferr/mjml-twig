@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d80003232139084c6dac91228645d014",
+    "content-hash": "b3b58d730cdd7a2a4ab2716dd9eb7bc4",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -327,16 +327,16 @@
         },
         {
             "name": "qferr/mjml-php",
-            "version": "dev-add_sf5_guzzle7",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qferr/mjml-php.git",
-                "reference": "b8024906dfffa382d69c8dc2e7a3cbdfa555cc30"
+                "reference": "c6ea36c190e304e399a957f7e03b5a378faf41b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/qferr/mjml-php/zipball/b8024906dfffa382d69c8dc2e7a3cbdfa555cc30",
-                "reference": "b8024906dfffa382d69c8dc2e7a3cbdfa555cc30",
+                "url": "https://api.github.com/repos/qferr/mjml-php/zipball/c6ea36c190e304e399a957f7e03b5a378faf41b9",
+                "reference": "c6ea36c190e304e399a957f7e03b5a378faf41b9",
                 "shasum": ""
             },
             "require": {
@@ -360,7 +360,7 @@
                     "email": "qferrer@outook.com"
                 }
             ],
-            "time": "2021-03-19T18:26:58+00:00"
+            "time": "2021-03-19T19:03:44+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -2276,9 +2276,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "qferr/mjml-php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

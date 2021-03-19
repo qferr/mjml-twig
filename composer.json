@@ -11,7 +11,7 @@
     "require": {
         "php": ">=7.2",
         "twig/twig": "^2.0|^3.0",
-        "qferr/mjml-php": "dev-add_sf5_guzzle7"
+        "qferr/mjml-php": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0"
