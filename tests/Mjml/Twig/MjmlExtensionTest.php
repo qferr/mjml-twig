@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Mjml\Twig;
+namespace Qferrer\Tests\Mjml\Twig;
 
 use PHPUnit\Framework\TestCase;
 use Qferrer\Mjml\Renderer\RendererInterface;
