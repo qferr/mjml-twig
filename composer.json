@@ -8,14 +8,9 @@
             "email": "qferrer@outook.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/qferr/mjml-php"
-        }
-    ],
     "require": {
-        "twig/twig": "~2.0",
+        "php": ">=7.2",
+        "twig/twig": "^2.0|^3.0",
         "qferr/mjml-php": "~1.0"
     },
     "require-dev": {
@@ -27,6 +22,11 @@
     "autoload": {
         "psr-4": {
             "Qferrer\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Qferrer\\Tests\\" : "tests/"
         }
     }
 }
