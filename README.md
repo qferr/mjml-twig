@@ -45,7 +45,8 @@ $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 $twig = new \Twig\Environment($loader);
 
 $renderer = new BinaryRenderer(__DIR__ . '/node_modules/.bin/mjml');
-// $renderer = new ApiRenderer('my-app-id','my-secret-key');
+// $api = new \Qferrer\Mjml\Http\CurlApi('my-app-id','my-secret-key');
+// $renderer = new \Qferrer\Mjml\Renderer\ApiRenderer($api);
 $twig->addExtension(new MjmlExtension($renderer));
 
 $html = $twig->render('newsletter.mjml.twig', [
@@ -62,11 +63,15 @@ Register the MJML extension as a service and tag it with `twig.extension`.
 ```yaml
 # config/services.yaml
 services:
+  # Qferrer\Mjml\Http\CurlApi:
+  #  arguments:
+  #     - '%env(MJML_APP_ID)%'
+  #     - '%env(MJML_SECRET_KEY)%'
+
   # mjml_renderer:
   #  class: Qferrer\Mjml\Renderer\ApiRenderer
   #  arguments:
-  #    - '%env(MJML_APP_ID)%'
-  #    - '%env(MJML_SECRET_KEY)%'
+  #    - '@Qferrer\Mjml\Http\CurlApi'
 
   mjml_renderer:
     class: Qferrer\Mjml\Renderer\BinaryRenderer
