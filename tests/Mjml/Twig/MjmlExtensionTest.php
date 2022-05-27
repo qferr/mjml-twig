@@ -2,18 +2,18 @@
 
 namespace Qferrer\Tests\Mjml\Twig;
 
-use PHPUnit\Framework\TestCase;
-use Qferrer\Mjml\Renderer\RendererInterface;
-use Qferrer\Mjml\Twig\MjmlExtension;
 use Twig\Node\Node;
 use Twig\TwigFilter;
+use PHPUnit\Framework\TestCase;
+use Qferrer\Mjml\RendererInterface;
+use Qferrer\Mjml\Twig\MjmlExtension;
 
 class MjmlExtensionTest extends TestCase
 {
     protected $renderer;
     protected $extension;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->renderer = $this->createMock(RendererInterface::class);
         $this->extension = new MjmlExtension($this->renderer);

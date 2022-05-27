@@ -2,9 +2,9 @@
 
 namespace Qferrer\Mjml\Twig;
 
-use Qferrer\Mjml\Renderer\RendererInterface;
-use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
+use Qferrer\Mjml\RendererInterface;
+use Twig\Extension\AbstractExtension;
 
 /**
  * Class MjmlExtension

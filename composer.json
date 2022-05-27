@@ -14,7 +14,7 @@
         "qferr/mjml-php": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~7.0"
+        "phpunit/phpunit": "~7.0|~8.0"
     },
     "scripts": {
         "test": "vendor/bin/phpunit tests/"
