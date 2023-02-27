@@ -56,6 +56,30 @@ $html = $twig->render('newsletter.mjml.twig', [
 
 You can now start using MJML in any Twig template.
 
+## Alternate Possability
+This works on some Serversystems a little bit better and on mean time you can debug the different Steps from twig -> mjml -> html
+
+```php
+<?php
+require_once 'vendor/autoload.php';
+
+use \Qferrer\Mjml\Renderer\ApiRenderer;
+use \Qferrer\Mjml\Renderer\BinaryRenderer;
+use \Qferrer\Mjml\Twig\MjmlExtension;
+
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
+$twig = new \Twig\Environment($loader);
+
+
+$tmpRenderFile = __DIR__ . "/templates/newsletter.mjml";    //Where the twig result will get parsed into
+$renderer = new \Qferrer\Mjml\Renderer\BinaryRenderer(__DIR__ . '/node_modules/.bin/mjml', $tmpRenderFile);
+$twig->addExtension(new MjmlExtension($renderer, $tmpRenderFile));
+
+//returns the content of __DIR__ . "/templates/newsletter.mjml.html created by the new BinaryRenderer PR https://github.com/qferr/mjml-php/pull/25
+$html = $twig->render('newsletter.mjml.twig', [
+    'username' => 'Quentin'
+]);
+
 Integrating in Symfony
 ----------------------
 Register the MJML extension as a service and tag it with `twig.extension`.
